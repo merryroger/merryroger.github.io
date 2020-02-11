@@ -1,0 +1,7 @@
+div.name {
+	position: absolute;
+	right: 15%;
+	bottom: 15%;
+	color: #666666;
+	font: 400 24pt "Roboto Condensed", sans-serif;
+}

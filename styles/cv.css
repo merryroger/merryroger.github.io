@@ -1,0 +1,103 @@
+section.sheet {
+	margin: 20px auto;
+	width: 80%;
+	min-width: 960px;
+	min-height: 100%;
+	border-left: 1px dotted #505050;
+	background-color: transparent; //#ffffff;
+}
+
+section.page {
+	text-align: left;
+	margin: 0 100pt;
+	padding: 80px 0;
+}
+
+section.section {
+	margin-bottom: 25px;
+	align-items: top;
+	justify-content: flex-start;
+	flex-direction: row;
+	display: flex;
+}
+
+.section nav {
+	width: 165px;
+	min-width: 165px;
+	padding: 0 20pt;
+	color: #606060; //#000000;
+	font: 400 12pt "PT Serif", serif;		
+}
+
+header{
+	margin-bottom: 40px;
+	align-items: top;
+	justify-content: flex-start;
+	flex-direction: row;
+	display: flex;
+}
+
+.picture img {
+	border-width: 0px;
+	border-radius: 168px;
+}
+
+.header {
+	margin-left: 50pt;	
+}
+
+.header h1 {
+	margin-bottom: 28px;
+	color: #aaaaaa; //#333333;
+	font: 400 28pt "Roboto Condensed", "Fira Sans Extra Condensed", sans-serif;
+}
+
+.header h4 {
+	margin-bottom: 32px;
+	color: #626262; //#999999;
+	font: 400 15pt "Fira Sans Extra Condensed", sans-serif;
+}
+
+.header p, .header ul, .header li {
+	color: #999999; //#666666;
+	font: 400 11pt "Roboto Condensed", "Fira Sans Extra Condensed", sans-serif;	
+}
+
+.header p, .header ul {
+	margin-bottom: 5px;
+}
+
+.header li {
+	margin: 3px 0 3px 25pt;
+}
+
+a:link {
+	color: #6699cc;
+}
+
+article.info {
+	padding-left: 10pt;
+}
+
+.info p, .info ul, .info dl {
+	margin-bottom: 12px;
+	color: #808080; //#555555;
+	font: 400 12pt "PT Serif", serif;		
+}
+
+.info li {
+	margin-top: 5px;
+	margin-left: 20pt;
+}
+
+.info dt, .info dd {
+	margin-bottom: 5px;
+}
+
+.info dd {
+	margin-left: 33pt;
+}
+
+.blk {
+	color: #aaaaaa; //#000000;
+}
