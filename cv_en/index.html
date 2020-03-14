@@ -41,79 +41,176 @@
   				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
 
+			@media screen and (min-width: 960px) {
+
+				main.sheet {
+					margin: 0 auto;
+					width: 940px;
+				}
+
+				section.page {
+					padding: 0 40pt;
+				}
+
+				.menu {
+					margin-bottom: 80px;
+				}
+
+				header {
+					margin-bottom: 60px;
+				}
+
+				.picture img {
+					margin: 5px 30pt 0 20pt;
+				}
+	
+				.header h1 {
+					margin-bottom: 21px;
+					font-size: 24pt;
+				}
+
+				.header p, .header ul, .header li, .header a {
+					font-size: 12pt;	
+				}
+
+				.section aside {
+					flex-basis: 150px;
+					flex-grow: 1;
+					display: flex;
+				}
+
+				article.info {
+					flex-basis: 100%;
+					flex-direction: column;
+					flex-grow: 1;
+					display: flex;
+				}
+
+				.info p, .info dl {
+					margin-bottom: 16px;
+				}
+
+			}
+
+			@media screen and (max-width: 960px) {
+
+				main.sheet {
+					width: 100%;
+					min-width: 320px;
+				}
+
+				section.page {
+					padding: 0 8%;
+				}
+
+				.menu {
+					margin-bottom: 40px;
+				}
+
+				header {
+					margin-bottom: 40px;
+					flex-direction: column;
+					align-items: center;
+				}
+
+				.picture img {
+					margin: 5px auto 30px;
+				}
+
+				.header h1 {
+					margin-bottom: 21px;
+					font-size: 21pt;
+				}
+
+				.header p, .header ul, .header li, .header a {
+					font-size: 11pt;	
+				}
+
+				section.section {
+					flex-direction: column;
+				}
+
+				.section aside {
+					margin-left: -8pt;
+					margin-bottom: 16px;
+					font-family: "Roboto Condensed", sans-serif;
+					font-size: 17pt;
+					display: block;
+				}
+
+				article.info {
+					display: block;
+				}
+
+				.info p {
+					margin-bottom: 16px;
+				}
+
+				.info dl {
+					margin-bottom: 20px;
+				}
+
+				.blk {
+					margin-bottom: 5px;
+					display: block;
+				}
+
+				.pblk {
+					margin-left: 33pt;
+					display: block;
+				}
+
+			}
+
 			* {
 				margin: 0;
 				padding: 0;
+				line-height: 1.5;
+				list-style-type: none;
+				color: #484848;
+				font: 400 12pt "PT Serif", serif;
 			}
 
 			html, body {
 				width: 100%;
 				height: 100%;
-				text-align: center;
-				background-color: #444444;
-			}
-
-			nav.menu {
-				position: relative;
-				top: 50px;
-				padding: 0 15%;
-				text-align: right;
-			}
-
-			a:link {
-				color: #6699cc;
-			}
-
-			a:visited {
-				color: #bb6633;	
-			}
-
-			.menu a, .menu div {
-				font: 400 11pt "Roboto Condensed", sans-serif;
-			}
-
-			footer {
-				color: #707070;
-				font: 400 11pt "Roboto Condensed", sans-serif;	
+				background-color: #ffffff;
+				overflow-x: hidden;
 			}
 
 			main.sheet {
-				margin: 20px auto;
-				width: 80%;
-				min-width: 960px;
 				min-height: 100%;
-				border-left: 1px dotted #505050;
-				background-color: transparent;
+				align-items: stretch;
+				flex-direction: column;
+				justify-content: flex-start;
+				display: flex;
+			}
+
+			header, section, footer, nav {
+				display: flex;
+			}
+
+			footer, nav {
+				justify-content: center;
 			}
 
 			section.page {
-				text-align: left;
-				margin: 0 100pt;
-				padding: 80px 0;
+				flex-direction: column;
 			}
 
-			section.section {
-				margin-bottom: 25px;
-				align-items: top;
-				justify-content: flex-start;
-				flex-direction: row;
-				display: flex;
+			footer, nav {
+				padding: 6px 0;
+				background-color: #333333;
+				justify-content: center;
 			}
 
-			.section nav {
-				width: 165px;
-				min-width: 165px;
-				padding: 0 20pt;
-				color: #606060;
-				font: 400 12pt "PT Serif", serif;		
+			footer *, nav *{
+				color: #999999;
+				font-family: "Roboto Condensed", sans-serif;
 			}
 
-			header {
-				margin-bottom: 40px;
-				align-items: top;
-				justify-content: flex-start;
-				flex-direction: row;
-				display: flex;
+			section.page {
+				flex-direction: column;
 			}
 
 			.picture img {
@@ -121,49 +218,29 @@
 				border-radius: 168px;
 			}
 
-			.header {
-				margin-left: 50pt;	
+			.header * {
+				color: #555555;
+				font-family: "Roboto Condensed", sans-serif;
 			}
 
-			.header h1 {
-				margin-bottom: 28px;
-				color: #aaaaaa;
-				font: 400 28pt "Roboto Condensed", sans-serif;
-			}
-
-			.header h4 {
-				margin-bottom: 32px;
-				color: #626262;
-				font: 400 15pt "Roboto Condensed", sans-serif;
-			}
-
-			.header p, .header ul, .header li {
-				color: #999999;
-				font: 400 11pt "Roboto Condensed", sans-serif;	
-			}
-
-			.header p, .header ul {
+			.header p {
 				margin-bottom: 5px;
 			}
 
+			.header ul {
+				margin-bottom: 12px;
+			}
+
 			.header li {
-				margin: 3px 0 3px 25pt;
+				margin: 3px 0 3px 16pt;
+			}
+
+			.section aside {
+				color: #999999;
 			}
 
 			article.info {
-				padding-left: 10pt;
-			}
-
-			.info p, .info ul, .info dl {
-				margin-bottom: 18px;
-				line-height: 1.5 !important;
-				color: #808080;
-				font: 400 12pt "PT Serif", serif;		
-			}
-
-			.info li {
-				margin-top: 5px;
-				margin-left: 20pt;
+				margin-bottom: 30px;
 			}
 
 			.info dt, .info dd {
@@ -175,7 +252,22 @@
 			}
 
 			.blk {
-				color: #aaaaaa;
+				color: #222222;
+			}
+
+			.breakout {
+				position: relative;
+				width: 100vw;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			a:link {
+				color: #3366cc;
+			}
+
+			a:visited {
+				color: #aa3399;	
 			}
 
 			.imi, .ami {
@@ -188,34 +280,37 @@
 			}
 
 			.imi {
-				background-color: #333333;
-				border: 1px solid #333333;
+				background-color: #aaaaaa;
+				border: 1px solid #dddddd;
 			}
 
 			.ami {
-				color: #777777;
-				border: 1px solid #555555;
+				color: #999999 !important;
+				border: 1px solid #777777;
 				cursor: not-allowed;
+				text-decoration: none;
 			}
 		</style>
 		<script src="/scripts/script.js"></script>
 	</head>
 	<body>
 		<main class="sheet">
-			<nav class="menu">
-				<a href="/index.html" class="imi">Ru</a>
-				<div class="ami">En</div>
-			</nav>
 			<section class="page">
+				<nav class="breakout menu">
+					<div>
+						<a href="/index.html" class="imi">Ru</a>
+						<a href="./index.html" class="ami">En</a>
+					</div>
+				</nav>
 				<header>
 					<div class="picture"><img src="/images/ava.jpg" width="168" height="168" alt="Alexei Rokin" /></div>
 					<div class="header">
 						<h1>Alexei Rokin</h1>
-						<h4>Born on 24-th of April, 1969.</h4>
-						<p>Place of living: Russian Federation, Kurgan.</p>
-						<ul>Contact info
-							<li>e-mail: merry_roger@yahoo.com;</li>
-							<li>Skype: merry_roger@yahoo.com (Alexei Rokin);</li>
+						<p>Born on 24-th of April, 1969.</p>
+						<p>Place of living: Kurgan, Russian Federation.</p>
+						<ul>Contact info:
+							<li>e-mail: <a href="mailto:merry_roger@yahoo.com">merry_roger@yahoo.com</a>;</li>
+							<li>skype: merry_roger@yahoo.com (Alexei Rokin);</li>
 							<li>git: <a href="https://github.com/merryroger/">https://github.com/merryroger/</a>.</li>
 						</ul>
 						<p>Regard either remote or office work.</p>
@@ -223,7 +318,6 @@
 					</div>
 				</header>
 				<section class="section">
-					<nav>&nbsp;</nav>
 					<article class="info">
 						<p>I’ve been doing programming since the late 90’s. I started writing programs in Delphi. Later, I studied Java and worked in a team to create a web project in this language. The project involved using dynamic HTML and JavaScript on the client side.</p>
 						<p>In the early 2000s, I learned about the existence of PHP, which I really liked, and since then I have been developing web projects using this preprocessor on the server side, and JavaScript on the client side.</p>
@@ -233,7 +327,7 @@
 					</article>
 				</section>
 				<section class="section">
-					<nav>Experience</nav>
+					<aside>Experience</aside>
 					<article class="info">
 						<dl>
 							<dt class="blk">October 2000&nbsp;— present.</dt>
@@ -271,40 +365,40 @@
 						<br />
 						<dl>
 							<dt class="blk">July 2000&nbsp;— July 2001.</dt>
-							<dd><span class="blk">HRS.</span> Java and JavaScript developer.</dd>
+							<dd><span class="blk">Hotel and Restaurant Systems.</span> Java and JavaScript developer.</dd>
 							<dd>Participation in a project to develop a hotel reservation system.</dd>
 						</dl>
 						<br />
 					</article>
 				</section>
 				<section class="section">
-					<nav>Education</nav>
+					<aside>Education</aside>
 					<article class="info">
 						<p>Higher. Graduated from the Kurgan Machine building institute in 1994 with honors. I studied in the special group in the direction of „Constructors“.</p>
 					</article>
 				</section>
 				<section class="section">
-					<nav>Further and advanced trainings</nav>
+					<aside>Further and&nbsp;advanced trainings</aside>
 					<article class="info">
 						<dl>
-							<dt><span class="blk">2020:</span> the „JavaScript/DOM/interfaces for programmers (ES2020)“ course;</dt>
-							<dt><span class="blk">2019:</span> course of German language Themen Aktuell (Anfänger, A2);</dt>
+							<dt><span class="blk">2020:</span> <span class="pblk">the „JavaScript/DOM/interfaces for programmers (ES2020)“ course;</span></dt>
+							<dt><span class="blk">2019:</span> <span class="pblk">course of German language Themen Aktuell (Anfänger, A2);</span></dt>
 							<dd>course of German language Themen Aktuell (Anfänger, A1);</dd>
 							<dd>the „Database design“ course;</dd>
 							<dd>the „SQL Basics“ course;</dd>
-							<dt><span class="blk">2018:</span> Cutting Edge English course (Advanced);</dt>
+							<dt><span class="blk">2018:</span> <span class="pblk">Cutting Edge English course (Advanced);</span></dt>
 							<dd>Cutting Edge English course (Upper-Intermediate);</dd>
 							<dd>course of Node.js;</dd>
 							<dd>course of Laravel (parts 1 and 2);</dd>
-							<dt><span class="blk">2017:</span> course of Java EE programming and Android application development;</dt>
+							<dt><span class="blk">2017:</span> <span class="pblk">course of Java EE programming and Android application development;</span></dt>
 							<dd>the „Basics of Java programming“ course;</dd>
 							<dd>Cutting Edge English course (Intermediate);</dd>
-							<dt><span class="blk">2016:</span> the „JavaScript/DOM/interfaces“ course.</dt>
+							<dt><span class="blk">2016:</span> <span class="pblk">the „JavaScript/DOM/interfaces“ course.</span></dt>
 						</dl>
 					</article>
 				</section>
 			</section>
-			<footer>
+			<footer class="breakout">
 				<div>©&nbsp;2020 Alexei Rokin</div>
 			</footer>
 		</main>
