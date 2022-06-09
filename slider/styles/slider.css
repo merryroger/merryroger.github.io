@@ -1,0 +1,323 @@
+:root {
+  --before-top: 0;
+  --before-left: 0;
+  --before-zx: 0;
+  --before-vs: hidden;
+  --before-bgr: '';
+  --before-trf: none;
+  --before-trn: none;
+  --before-opc: 1;
+  --before-filter: none;
+  --after-top: 0;
+  --after-left: 0;
+  --after-zx: 0;
+  --after-vs: hidden;
+  --after-bgr: '';
+  --after-trn: none;
+  --after-trf: none;
+  --after-opc: 1;
+  --after-filter: none;
+
+  --step-selected-clr: #e1670e;
+  --slider-bgr: #ccc;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: var(--slider-bgr);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  top: var(--before-top);
+  left: var(--before-left);
+  z-index: var(--before-zx);
+  width: 100%;
+  height: 100%;
+  visibility: var(--before-vs);
+  background-image: var(--before-bgr);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: var(--before-trf);
+  transition: var(--before-trn);
+  opacity: var(--before-opc);
+  filter: var(--before-filter);
+}
+
+.slider::after {
+  position: absolute;
+  content: '';
+  top: var(--after-top);
+  left: var(--after-left);
+  z-index: var(--after-zx);
+  width: 100%;
+  height: 100%;
+  visibility: var(--after-vs);
+  background-image: var(--after-bgr);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: var(--after-trf);
+  transition: var(--after-trn);
+  opacity: var(--after-opc);
+  filter: var(--after-filter);
+}
+
+.slider-wheel {
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  background: transparent;
+  display: none;
+}
+
+.slider-wheel.al-hrzbtm {
+  bottom: 0;
+  width: 1%;
+  height: 120px;
+}
+
+.slider-wheel.al-hrztop {
+  top: 0;
+  width: 1%;
+  height: 16px;
+}
+
+.slider-wheel.al-hrzcnt {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.slider-wheel.al-vrtrgt {
+  right: 0;
+  width: 1%;
+  height: 16px;
+}
+
+.slider-wheel.al-vrtcnt {
+  left: 49%;
+  right: 49%;
+  width: 1%;
+  height: 16px;
+}
+
+.slider-wheel.decr.al-hrzbtm,
+.slider-wheel.decr.al-hrzcnt,
+.slider-wheel.decr.al-hrztop {
+  left: 0;
+}
+
+.slider-wheel.decr.al-hrzbtm::after,
+.slider-wheel.decr.al-hrzcnt::after,
+.slider-wheel.decr.al-hrztop::after {
+  left: 20px;
+}
+
+.slider-wheel.incr.al-hrzbtm,
+.slider-wheel.incr.al-hrzcnt,
+.slider-wheel.incr.al-hrztop {
+  right: 0;
+}
+
+.slider-wheel.incr.al-hrzbtm::after,
+.slider-wheel.incr.al-hrzcnt::after,
+.slider-wheel.incr.al-hrztop::after {
+  right: 20px;
+}
+
+.slider-wheel.decr.al-vrtrgt,
+.slider-wheel.decr.al-vrtcnt,
+.slider-wheel.decr.al-vrtlft {
+  top: 0;
+}
+
+.slider-wheel.decr.al-vrtrgt::after {
+  top: 20px;
+  left: -45px;
+  transform: rotate(90deg);
+}
+
+.slider-wheel.decr.al-vrtcnt::after {
+  top: 5px;
+  transform: rotate(90deg);
+}
+
+.slider-wheel.decr.al-vrtlft::after {
+  left: 15px;
+  top: 5px;
+  transform: rotate(90deg);
+}
+
+.slider-wheel.incr.al-vrtrgt,
+.slider-wheel.incr.al-vrtcnt,
+.slider-wheel.incr.al-vrtlft {
+  bottom: 0;
+}
+
+.slider-wheel.incr.al-vrtrgt::after {
+  left: -45px;
+  bottom: 20px;
+  transform: rotate(90deg);
+}
+
+.slider-wheel.incr.al-vrtcnt::after {
+  bottom: 10px;
+  transform: rotate(90deg);
+}
+
+.slider-wheel.incr.al-vrtlft::after {
+  left: 15px;
+  bottom: 10px;
+  transform: rotate(90deg);
+}
+
+.slider-wheel.decr::after {
+  display: flex;
+  position: absolute;
+  content: "";
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  width: 40px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, .60) url("../images/less.svg") no-repeat center center;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, .3);
+  visibility: visible;
+  cursor: pointer;
+}
+
+.slider-wheel.incr::after {
+  display: flex;
+  position: absolute;
+  content: "";
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  width: 40px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, .60) url("../images/greater.svg") no-repeat center center;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, .30);
+  visibility: visible;
+  cursor: pointer;
+}
+
+.slider-wheel:active::after {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.slider-wheel-label {
+  display: none;
+}
+
+.slider-wheel-label:focus .slider-wheel:after {
+  background-color: rgba(0, 0, 0, .8);
+  outline: 1px solid var(--step-selected-clr);
+  outline-offset: 0;
+}
+
+.slider-form {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  gap: 20px;
+}
+
+.slider-form.al-hrzbtm {
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+}
+
+.slider-form.al-hrztop {
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 20px;
+}
+
+.slider-form.al-vrtrgt {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: auto;
+  right: 30px;
+  bottom: 0;
+}
+
+.slider-form.al-vrtlft {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 30px;
+  right: auto;
+  bottom: 0;
+}
+
+input[type="radio"].slider-button {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -moz-appearance: initial;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  z-index: -1;
+  position: relative;
+  visibility: hidden;
+}
+
+.slider-form input[type="radio"].slider-button::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  z-index: 2;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  visibility: visible;
+}
+
+.slider-form input[type="radio"]:checked::after {
+  background-color: rgba(255, 255, 255, 1);
+  cursor: default;
+}
+
+.slider-form label:focus input[type="radio"]::after {
+  outline: 2px solid var(--bgr-clr);
+  outline-offset: 1px;
+}
+
+.slider-form label {
+  margin: 0;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider-form label:focus {
+  cursor: default;
+}

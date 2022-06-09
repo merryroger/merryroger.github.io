@@ -1,0 +1,138 @@
+@media (max-width: 660px) {
+  .slider .slider-form {
+    gap: 15px;
+  }
+
+  .sample__header {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .sample__text {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .slide-1 {
+    background-image: url("../images/slide-1-600.jpg");
+  }
+
+  .slide-2 {
+    background-image: url("../images/slide-2-600.jpg");
+  }
+
+  .slide-3 {
+    background-image: url("../images/slide-3-600.jpg");
+  }
+
+  .slide-4 {
+    background-image: url("../images/slide-4-600.jpg");
+  }
+
+  .slide-5 {
+    background-image: url("../images/slide-5-600.jpg");
+  }
+}
+
+@media (max-width: 560px) {
+  .slider .slider-form {
+    gap: 10px;
+  }
+
+  .sample__header {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sample__text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .text-column {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .two-col-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+
+  .section.description,
+  .section.versions {
+    padding-left: 0;
+  }
+
+  .section.description .section-title,
+  .section.versions .section-title {
+    text-indent: 0;
+  }
+
+  .vd-header {
+    text-indent: 0;
+  }
+}
+
+@media (max-width: 472px) {
+  .slider .slider-form {
+    gap: 8px;
+  }
+
+  .sample__header {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .sample__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .slide-1 {
+    background-image: url("../images/slide-1-472.jpg");
+  }
+
+  .slide-2 {
+    background-image: url("../images/slide-2-472.jpg");
+  }
+
+  .slide-3 {
+    background-image: url("../images/slide-3-472.jpg");
+  }
+
+  .slide-4 {
+    background-image: url("../images/slide-4-472.jpg");
+  }
+
+  .slide-5 {
+    background-image: url("../images/slide-5-472.jpg");
+  }
+}
+
+@media (max-width: 390px) {
+  .nav__item {
+    min-width: 24px;
+    width: 24px;
+    background-position: center center;
+  }
+
+  .nav__item span {
+    display: none;
+  }
+
+  .configure {
+    background-size: 18px auto;
+  }
+
+  .github {
+    background-size: contain;
+  }
+}

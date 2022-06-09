@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The demo page for the Slider by Ehwaz Raido (Merry Roger)</title>
+  <link rel="stylesheet" href="./styles/page.css">
+  <link rel="stylesheet" href="./styles/media.css">
+  <link rel="stylesheet" href="./styles/slider.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png">
+  <script src="./js/slider.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <img class="logo" src="./images/ehr_logo.png" alt="Logotype">
+      <nav class="header__nav">
+        <button class="nav__item configure" tabindex="1"><span>Configure</span></button>
+        <a class="nav__item github" href="https://github.com/merryroger/slider" tabindex="2"><span>Source</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="section demo">
+        <h1 class="main-title">
+          The Slider demo
+        </h1>
+        <div class="slider slide-1">
+          <article class="sample__article flex">
+            <h4 class="sample__header">
+              Immobile data block
+            </h4>
+            <p class="sample__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, reiciendis aliquam? Provident
+              nemo maiores labore a quidem distinctio, officiis inventore nesciunt. Nulla saepe animi tenetur porro
+              ratione incidunt quibusdam enim?
+            </p>
+          </article>
+          <label class="slider-wheel-label" for="wheel-decr" tabindex="3">
+            <button class="slider-wheel decr al-hrzbtm" id="wheel-decr" name="wheel-decr"></button>
+          </label>
+          <label class="slider-wheel-label" for="wheel-incr" tabindex="5">
+            <button class="slider-wheel incr al-hrzbtm" id="wheel-incr" name="wheel-incr"></button>
+          </label>
+          <form class="slider-form al-hrzbtm">
+            <label for="slider-ctrl-1" data-slide="0" tabindex="4">
+              <input class="slider-button slide-1" type="radio" id="slider-ctrl-1" name="slider-ctrl"
+                onchange="slider.go(0, this)" checked>
+            </label>
+            <label for="slider-ctrl-2" data-slide="1" tabindex="4">
+              <input class="slider-button slide-2" type="radio" id="slider-ctrl-2" name="slider-ctrl"
+                onchange="slider.go(1, this)">
+            </label>
+            <label for="slider-ctrl-3" data-slide="2" tabindex="4">
+              <input class="slider-button slide-3" type="radio" id="slider-ctrl-3" name="slider-ctrl"
+                onchange="slider.go(2, this)">
+            </label>
+            <label for="slider-ctrl-4" data-slide="3" tabindex="4">
+              <input class="slider-button slide-4" type="radio" id="slider-ctrl-4" name="slider-ctrl"
+                onchange="slider.go(3, this)">
+            </label>
+            <label for="slider-ctrl-5" data-slide="4" tabindex="4">
+              <input class="slider-button slide-5" type="radio" id="slider-ctrl-5" name="slider-ctrl"
+                onchange="slider.go(4, this)">
+            </label>
+          </form>
+        </div>
+      </section>
+
+      <section class="section description">
+        <h2 class="section-title">
+          Description
+        </h2>
+        <div class="two-col-container">
+          <div class="text-column">
+            <p class="text-paragraph">
+              This is&nbsp;a&nbsp;simple Javascript Slider created by&nbsp;the <a
+                href="https://merryroger.github.io/cv_en/">author</a> for a&nbsp;learning project.
+              It&nbsp;supports several transition options and has a&nbsp;number of&nbsp;settings for changing its
+              operating modes.
+            </p>
+            <p class="text-paragraph">
+              On&nbsp;this demo page, you can change these settings at&nbsp;your own discretion on&nbsp;the Slider
+              configuration panel. The settings in&nbsp;the configuration panel are grouped by&nbsp;functional purposes.
+            </p>
+            <ul class="text-paragraph">
+              <span>The Mode settings are:</span>
+              <li class="text-list-item">
+                <b>switch</b> is&nbsp;the default mode. It&nbsp;looks like as&nbsp;the simple slide switching;
+              </li>
+              <li class="text-list-item">
+                <b>wipe</b> is&nbsp;a&nbsp;mode when the next slide wipes the previous one;
+              </li>
+              <li class="text-list-item">
+                <b>rollup</b> is&nbsp;a&nbsp;mode when the next slide rolls up&nbsp;the immobile previous one;
+              </li>
+              <li class="text-list-item">
+                <b>meltdown</b> is&nbsp;a&nbsp;mode when the previous slide &laquo;melts&raquo; and the previous one
+                appears through&nbsp;it;
+              </li>
+              <li class="text-list-item">
+                <b>fog</b> is&nbsp;a&nbsp;mode in&nbsp;which the previous slide is&nbsp;first blurred, then
+                it&nbsp;is&nbsp;replaced by&nbsp;a&nbsp;blurred next slide, and finally the new image becomes clear.
+              </li>
+            </ul>
+            <p class="text-paragraph">
+              You can change the shift direction for modes with movable slides. These are <b>right</b> (default),
+              <b>left</b>, <b>top</b> and <b>bottom</b>. It&nbsp;may seem illogical but these names not define
+              directions of&nbsp;slides moving. Actually, they define directions of&nbsp;sequential switching the
+              control buttons at&nbsp;the Slider.
+            </p>
+          </div>
+          <div class="text-column">
+            <p class="text-paragraph">
+              The Slider can operate in&nbsp;two modes: either <b>automatic</b> or&nbsp;<b>manual</b>. Also you can
+              toggle the <b>loop</b> mode. Both these settings can be&nbsp;toggling independently in&nbsp;the
+              &laquo;Automation&raquo; section of&nbsp;the control panel.
+            </p>
+            <p class="text-paragraph">
+              When the automatic mode is&nbsp;on,&nbsp;the Slider switches the slides by&nbsp;itself depending
+              on&nbsp;the &laquo;loop&raquo; option. If&nbsp;the <b>loop</b> is&nbsp;enabled, it&nbsp;repeats show
+              cycles
+              infinitely, otherwise it&nbsp;does a&nbsp;pass only once till the end of&nbsp;the slide set.
+            </p>
+            <p class="text-paragraph">
+              Also, in&nbsp;the &laquo;auto&raquo; mode, you can select any slide asynchronously by&nbsp;clicking
+              or&nbsp;selecting from the keyboard the corresponding button in&nbsp;the set of&nbsp;slider control
+              buttons. In&nbsp;the &laquo;manual&raquo; mode, these buttons still remain available, but additional
+              buttons appear to&nbsp;move the slides back and forth sequentially. The state of&nbsp;the
+              &laquo;loop&raquo; option does not matter in&nbsp;this case.
+            </p>
+            <p class="text-paragraph">
+              There are time settings in&nbsp;the &laquo;Timings&raquo; section of&nbsp;the control panel. You can set
+              both the delay between changing slides and the duration of&nbsp;transitions in&nbsp;milliseconds.
+            </p>
+            <p class="text-paragraph">
+              And finally, you can select the position of&nbsp;the Sldier`s control buttons.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section versions">
+        <h2 class="section-title">
+          Version info
+        </h2>
+        <section class="version-data">
+          <h3 class="vd-header">
+            The last version
+          </h3>
+          <h4 class="vdt">
+            0.1.3 (<time datetime="2022-06-09 09:20">2022, Jun 9</time>)
+          </h4>
+          <p class="text-paragraph">
+            The previous bug was fixed not very well. Now it`s fixed properly.
+          </p>
+        </section>
+        <section class="version-data">
+          <h3 class="vd-header">
+            Other versions
+          </h3>
+          <ul class="version-items">
+            <li class="version-item">
+              <h4 class="vdt">
+                0.1.2 (<time datetime="2022-06-08">2022, Jun 8</time>)
+              </h4>
+              <p class="text-paragraph">
+                Fixed a bug with interruption of auto-switching in the default mode after manual slide selection.
+              </p>
+            </li>
+            <li class="version-item">
+              <h4 class="vdt">
+                0.1.1 (<time datetime="2022-06-08">2022, Jun 7</time>)
+              </h4>
+              <p class="text-paragraph">
+                The destructor function was added. Some code fragments were rebuilt.
+              </p>
+            </li>
+            <li class="version-item">
+              <h4 class="vdt">
+                0.1.0 (<time datetime="2022-06-08">2022, Jun 1-6</time>)
+              </h4>
+              <p class="text-paragraph">
+                The start version with the initial set of options.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="footer__logo" href="#" title="The site of ehwaz.ru (Temporarily unavailable)"></a>
+      <h5 class="credentials">&copy; 2022 Ehwaz Raido (Merry Roger)</h5>
+    </div>
+  </footer>
+
+  <div class="control-panel off">
+    <h5 class="controls">Configure&nbsp;slider</h5>
+    <form action="#" class="control__form">
+      <div class="form-column">
+        <section>
+          <h6>Mode</h6>
+          <ul class="slider-modes">
+            <li class="slider-mode" tabindex="7" data-mode="switch">
+              <input class="slider-input" type="radio" name="mode" value="switch">
+              switch (default)
+            </li>
+            <li class="slider-mode" tabindex="7" data-mode="wipe">
+              <input class="slider-input" type="radio" name="mode" value="wipe">
+              wipe
+            </li>
+            <li class="slider-mode" tabindex="7" data-mode="rollup">
+              <input class="slider-input" type="radio" name="mode" value="rollup">
+              rollup
+            </li>
+            <li class="slider-mode" tabindex="7" data-mode="meltdown">
+              <input class="slider-input" type="radio" name="mode" value="meltdown">
+              meltdown
+            </li>
+            <li class="slider-mode" tabindex="7" data-mode="fog">
+              <input class="slider-input" type="radio" name="mode" value="fog">
+              fog
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h6>Direction</h6>
+          <ul class="slider-directions">
+            <li class="slider-direction" tabindex="8" data-dir="right">
+              <input class="slider-input" type="radio" name="direction" value="right">
+              right (default)
+            </li>
+            <li class="slider-direction" tabindex="8" data-dir="left">
+              <input class="slider-input" type="radio" name="direction" value="left">
+              left
+            </li>
+            <li class="slider-direction" tabindex="8" data-dir="top">
+              <input class="slider-input" type="radio" name="direction" value="top">
+              top
+            </li>
+            <li class="slider-direction" tabindex="8" data-dir="bottom">
+              <input class="slider-input" type="radio" name="direction" value="bottom">
+              bottom
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="form-column">
+        <section>
+          <h6>Automation</h6>
+          <ul class="slider-automations">
+            <li class="slider-autooption" tabindex="9" data-opt="auto">
+              <input class="slider-input" type="checkbox" name="auto">
+              auto
+            </li>
+            <li class="slider-autooption" tabindex="9" data-opt="loop">
+              <input class="slider-input" type="checkbox" name="loop">
+              loop
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h6>Timings</h6>
+          <ul>
+            <li class="slider-timings selected">
+              <label for="swap-delay">swap delay (ms)</label>
+              <input class="slider-config-text swap-delay" id="swap-delay" name="swap-delay" type="number" min="300"
+                max="60000" placeholder="300 - 60 000 ms" tabindex="10" required>
+            </li>
+            <li class="slider-timings selected">
+              <label for="swap-duration">swap duration (ms)</label>
+              <input class="slider-config-text swap-duration" id="swap-duration" name="swap-duration" type="number"
+                min="100" max="3000" placeholder="100 - 3 000 ms" tabindex="11" required>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h6>Controls placing</h6>
+          <input type="hidden" value="al-hrzbtm" name="pl-default">
+          <ul class="placing-layouts">
+            <li class="placing-layout" tabindex="12">
+              <input class="placing-checker al-hrzbtm" name="placing" type="radio" value="al-hrzbtm" checked>
+            </li>
+            <li class="placing-layout" tabindex="12">
+              <input class="placing-checker al-hrzcnt" name="placing" type="radio" value="al-hrzcnt">
+            </li>
+            <li class="placing-layout" tabindex="12">
+              <input class="placing-checker al-hrztop" name="placing" type="radio" value="al-hrztop">
+            </li>
+            <li class="placing-layout" tabindex="12">
+              <input class="placing-checker al-vrtrgt" name="placing" type="radio" value="al-vrtrgt">
+            </li>
+            <li class="placing-layout" tabindex="12">
+              <input class="placing-checker al-vrtcnt" name="placing" type="radio" value="al-vrtcnt">
+            </li>
+            <li class="placing-layout" tabindex="12">
+              <input class="placing-checker al-vrtlft" name="placing" type="radio" value="al-vrtlft">
+            </li>
+          </ul>
+        </section>
+      </div>
+    </form>
+
+    <div class="configure-controls">
+      <button class="accept-button" type="button" tabindex="13">Accept & reload</button>
+      <button class="cancel-button" type="button" tabindex="14">Cancel</button>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
