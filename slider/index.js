@@ -227,40 +227,27 @@ confButtons.forEach(button => {
 });
 
 function replaceSliderControlButtons(alignCode) {
-  let sliderForm = document.querySelector('.slider-form');
-  let decrWheelBtn = document.querySelector('.slider-wheel.decr');
-  let incrWheelBtn = document.querySelector('.slider-wheel.incr');
+  let lbAlign;
+  let whAlign = alignCode;
 
   switch (alignCode) {
     case 'al-hrzcnt':
-      sliderForm.className = 'slider-form al-hrzbtm';
-      decrWheelBtn.className = 'slider-wheel decr al-hrzcnt';
-      incrWheelBtn.className = 'slider-wheel incr al-hrzcnt';
-      break;
-    case 'al-hrztop':
-      sliderForm.className = 'slider-form al-hrztop';
-      decrWheelBtn.className = 'slider-wheel decr al-hrztop';
-      incrWheelBtn.className = 'slider-wheel incr al-hrztop';
-      break;
-    case 'al-vrtrgt':
-      sliderForm.className = 'slider-form al-vrtrgt';
-      decrWheelBtn.className = 'slider-wheel decr al-vrtrgt';
-      incrWheelBtn.className = 'slider-wheel incr al-vrtrgt';
+      lbAlign = 'al-hrzbtm';
       break;
     case 'al-vrtcnt':
-      sliderForm.className = 'slider-form al-vrtrgt';
-      decrWheelBtn.className = 'slider-wheel decr al-vrtcnt';
-      incrWheelBtn.className = 'slider-wheel incr al-vrtcnt';
+      lbAlign = 'al-vrtrgt';
       break;
+    case 'al-hrztop':
+    case 'al-vrtrgt':
     case 'al-vrtlft':
-      sliderForm.className = 'slider-form al-vrtlft';
-      decrWheelBtn.className = 'slider-wheel decr al-vrtlft';
-      incrWheelBtn.className = 'slider-wheel incr al-vrtlft';
+      lbAlign = alignCode;
       break;
     case 'al-hrzbtm':
     default:
-      sliderForm.className = 'slider-form al-hrzbtm';
-      decrWheelBtn.className = 'slider-wheel decr al-hrzbtm';
-      incrWheelBtn.className = 'slider-wheel incr al-hrzbtm';
+      lbAlign = whAlign = 'al-hrzbtm';
   }
+
+  document.querySelector('.slider-form').className = `slider-form ${lbAlign}`;
+  document.querySelector('.slider-wheel.decr').className = `slider-wheel decr ${whAlign}`;
+  document.querySelector('.slider-wheel.incr').className = `slider-wheel incr ${whAlign}`;
 }
