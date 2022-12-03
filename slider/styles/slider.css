@@ -283,7 +283,6 @@ input[type="radio"].slider-button {
   height: 15px;
   border-radius: 100%;
   z-index: -1;
-  position: relative;
   visibility: hidden;
 }
 
