@@ -206,7 +206,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAMAAABZ
 /************************************************************************/
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/";
+/******/ 		__webpack_require__.p = "/paymentform";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -1357,13 +1357,8 @@ var EmailField = /*#__PURE__*/function (_InputField) {
 }(InputField);
 
 ;// CONCATENATED MODULE: ./src/js/cardbackgrounds.js
-var backGrounds = [];
-backGrounds.push(__webpack_require__(334));
-backGrounds.push(__webpack_require__(772));
-backGrounds.push(__webpack_require__(691));
-backGrounds.push(__webpack_require__(13));
-backGrounds.push(__webpack_require__(205));
-backGrounds.push(__webpack_require__(135));
+/* eslint-disable global-require */
+var backGrounds = [__webpack_require__(334), __webpack_require__(772), __webpack_require__(691), __webpack_require__(13), __webpack_require__(205), __webpack_require__(135)];
 function pickBackground() {
   return backGrounds[Math.floor(Math.random() * backGrounds.length)];
 }
@@ -1371,6 +1366,7 @@ function pickBackground() {
 ;// CONCATENATED MODULE: ./src/index.js
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-bitwise */
+
 
 
 
