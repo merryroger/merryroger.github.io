@@ -206,7 +206,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAMAAABZ
 /************************************************************************/
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/paymentform";
+/******/ 		__webpack_require__.p = "/paymentform/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
