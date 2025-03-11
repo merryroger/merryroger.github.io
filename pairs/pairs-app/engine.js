@@ -167,7 +167,7 @@ function getPairsSample(params = {}) {
       this.waitTarget.setAttribute('data-value', `${requestedValue}`)
       this.waitTarget.style.setProperty('--stock-cp-visibility', 'hidden');
       this.waitTarget.style.setProperty('--card-face-visibility', 'visible');
-      this.waitTarget.style.setProperty('--trf-fcp', 'scaleX(100%)');
+      setTimeout(() => this.waitTarget.style.setProperty('--trf-fcp', 'scaleX(100%)'), 1);
       this.waitTarget.setAttribute('data-flipped', 'true');
     }
   }
